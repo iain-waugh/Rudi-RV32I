@@ -35,11 +35,11 @@
 	.align	2
 	.globl	_start
 	.type	_start, @function
-        .org    0
+	.org	0
 _start:
 	lui	a1,0x10001
-        # Set the stack address to 0x10000FFC
+	# Set the stack address to 0x10000FFC
 	addi	sp, a1, -4
-        # Call the main function
-        jal     ra, test_program
-        j       _start 
+	# Call the main function
+	jal	ra, test_program
+	j	_start 
